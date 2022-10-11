@@ -1,14 +1,13 @@
-const factorial = require("../factorial/index");
+const factorialOfNumber = require("../factorial/index");
 
-const ratio = require("../ratio/index");
+const ratioOfTwoNumbers = require("../ratio/index");
 
-function fact(num1, num2, num3) {
+function ratioAndFactorial(num1, num2, num3) {
   rat_fact = {};
-  ratio1 = ratio(num1, num2);
-  fact1 = factorial(num3);
-  rat_fact[ratio] = ratio1;
-  rat_fact[factorial] = fact1;
-  return rat_fact;
+  const ratio = ratioOfTwoNumbers(num1, num2);
+  const factorial = factorialOfNumber(num3);
+
+  return { ratio, factorial };
 }
 
-module.exports = fact();
+module.exports = ratioAndFactorial();
